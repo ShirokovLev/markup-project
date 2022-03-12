@@ -1,0 +1,83 @@
+@import '../../assets/css/colors';
+
+.collapse-item__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.collapse-item__trigger{
+    width: 16px;
+    height: 16px;
+    border: 1.6px solid $primary;
+    border-radius: 50%;
+    position: relative;
+}
+
+.collapse-item__trigger:after,
+.collapse-item__trigger:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: 8px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: $primary;
+    transition: .3s;
+}
+
+.collapse-item__trigger:before{
+    transform: rotate(90deg);
+}
+
+.collapse-item__trigger_active:before{
+    transform: rotate(0deg);
+}
+
+.collapse-block{
+    display: none;
+}
+
+.collapse-block_visible{
+    display: block;
+}
+
+.collapse-item{
+    padding: 24px 0;
+}
+
+.collapse-list li:not(:last-child) .collapse-item{
+    border-bottom: 1px solid #EAECF0;
+}
+
+.collapse-item__text-block{
+    padding-top: 24px;
+}
+
+.text-block > .text{
+    margin-bottom: 20px;
+}
+
+.dot-list li{
+    position: relative;
+    padding-left: 18px;
+}
+
+.dot-list li:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 6px;
+    height: 6px;
+    background-color: $primary;
+    border-radius: 50%;
+}
+
+.text-block .dot-list{
+    margin-bottom: 30px;
+}

@@ -1,0 +1,67 @@
+@import '../../assets/css/colors';
+
+.game-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 32px;
+}
+
+.add-card{
+    width: 100%;
+    height: 100%;
+    border: 2px dashed #D6BBFB;
+    box-sizing: border-box;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 44px;
+}
+
+.add-card__text{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.add-card__button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-card__plus-icon{
+    width: 16px;
+    height: 16px;
+    border: 1.6px solid #fff;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 10px;
+}
+
+.add-card__plus-icon:before,
+.add-card__plus-icon:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: 8px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+.add-card__plus-icon:after{
+    transform: rotate(90deg);
+}
+
+@media (max-width: 767px) {
+    .game-cards{
+        grid-gap: 16px;
+    }
+}

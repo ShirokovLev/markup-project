@@ -1,0 +1,46 @@
+@import '../../assets/css/colors';
+
+.breadcrumbs{
+    padding: 40px 0 30px;
+}
+
+.breadcrumbs__list{
+    display: flex;
+    align-items: center;
+    grid-gap: 32px;
+}
+
+.breadcrumbs__link{
+    transition: .3s;
+    display: flex;
+}
+
+.breadcrumbs__link:hover{
+    color: $primary;
+}
+
+.breadcrumbs__item{
+    position: relative;
+}
+
+.breadcrumbs__item svg{
+    position: absolute;
+    left: calc(100% + 12px);
+    top: 0;
+    display: flex;
+    bottom: 0;
+    margin: auto;
+    transform: rotate(-90deg);
+}
+
+@media (max-width: 1200px) {
+    .breadcrumbs{
+        padding: 30px 0 20px;
+    }
+}
+
+@media (max-width: 767px){
+    .breadcrumbs{
+        padding: 20px 0 16px;
+    }
+}

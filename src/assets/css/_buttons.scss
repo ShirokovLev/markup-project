@@ -1,0 +1,36 @@
+@import './colors';
+
+.button{
+    height: 44px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    width: max-content;
+    border-radius: 8px;
+    transition: .3s;
+    justify-content: center;
+}
+
+.button_color_white{
+    background-color: #fff;
+    color: $textColorBlack;
+    border: 1px solid #D0D5DD;
+}
+
+.button_color_white:hover{
+    background-color: darken(#fff,5%);
+    color: $textColorBlack;
+}
+
+.button_color_purple{
+    background-color: $primary;
+    color: $textColorWhite;
+}
+
+.button_color_purple:hover{
+    color: $textColorWhite;
+    background-color: darken($primary,5%);
+}

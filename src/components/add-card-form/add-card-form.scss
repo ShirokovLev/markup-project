@@ -1,0 +1,42 @@
+.add-card-form{
+    max-width: 680px;
+    background-color: #fff;
+    padding: 45px 30px;
+    border-radius: 8px;
+    position: relative;
+    margin: 15px;
+}
+
+.add-card-form__grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+}
+
+.add-card-form__grid{
+    margin-bottom: 15px;
+}
+
+.add-card-form__caption{
+    margin-bottom: 20px;
+}
+
+.add-card-form__textarea{
+    margin-bottom: 40px;
+}
+
+.add-card-form__close{
+    position: absolute;
+    right: 25px;
+    top: 25px;
+}
+
+@media (max-width: 767px) {
+    .add-card-form__grid{
+        grid-template-columns: 1fr;
+    }
+
+    .add-card-form{
+        padding: 30px 15px;
+    }
+}

@@ -1,0 +1,57 @@
+@import '../../assets/css/colors';
+
+.pagination-block{
+    background-color: #fff;   
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0;
+}
+
+.pagination-list{
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+}
+
+.pagination-block-link{
+    display: flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: .3s;
+    color: $textColorBlack;
+}
+
+.pagination-block-link:hover{
+    background-color: #F9F5FF;
+    color: $primary;
+}
+
+.pagination-block-link_active{
+    background-color: $primary;
+    color: #fff;
+}
+
+.pagination-block__prev{
+    transform: rotate(90deg);
+    margin-right: 25px;
+}
+
+.pagination-block__next{
+    transform: rotate(-90deg);
+    margin-left: 25px;
+}
+
+@media (max-width: 767px){
+    .pagination-button{
+        width: 100%;
+    }
+
+    .pagination-button{
+        margin-bottom: 60px;
+    }
+}

@@ -1,0 +1,86 @@
+@import '../../assets/css/colors';
+
+.footer{
+    background-color: #1D2939;
+    padding-top: 56px;
+    padding-bottom: 64px;
+}
+
+.mailing-form{
+    display: flex;
+    align-items: center;
+    grid-gap: 8px;
+}
+
+.footer__mailing-row{
+    padding-bottom: 56px;
+    border-bottom: 1px solid #344054;
+    margin-bottom: 56px;
+}
+
+.footer-menu__caption{
+    margin-bottom: 20px;
+}
+
+.footer-menu__list li:not(:last-child){
+    margin-bottom: 8px;
+}
+
+.footer-link{
+    transition: .3s;
+}
+
+.footer-link:hover{
+    color: $primary;
+}
+
+.footer__links-row{
+    margin-bottom: 88px;
+}
+
+@media (max-width: 1200px) {
+    .footer{
+        padding-bottom: 32px;
+    }
+}
+
+@media (max-width: 990px) {
+    .footer__mailing-form{
+        margin-top: 32px;
+    }
+
+    .footer{
+        padding-bottom: 98px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .footer{
+        padding-top: 32px;
+    }
+
+    .mailing-form{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .mailing-form .button{
+        width: 100%;
+    }
+
+    .footer__mailing-row{
+        padding-bottom: 32px;
+        margin-bottom: 32px;
+    }
+
+    .footer__links-row .col-md-3:not(:last-child) .footer-menu{
+        margin-bottom: 32px;
+    }
+
+    .footer__links-row{
+        margin-bottom: 48px;
+    }
+}
+
+

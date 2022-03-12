@@ -1,0 +1,38 @@
+@import './colors';
+
+.input{
+    height: 44px;
+    border: 1px solid #D0D5DD;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 0 18px;
+    width: 100%;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $textColorBlack;
+    appearance: textfield;
+}
+
+.input::placeholder,
+.textarea::placeholder{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $textColorGray;
+}
+
+.textarea{
+    height: 100px;
+    border: 1px solid #D0D5DD;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 10px 18px;
+    width: 100%;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $textColorBlack;
+}

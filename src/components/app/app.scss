@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import '../../assets/css/_colors';
+@import '../../assets/css/_typography';
+@import '../../assets/css/_buttons';
+@import '../../assets/css/_form';
+
+ul,
+ol,
+p,
+label,
+h1,
+h2,
+h3{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+input, textarea, button{
+    outline: none;
+}
+
+a,a:hover{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container{
+    @media (min-width: 1400px){
+        max-width: 1240px;
+    }
+
+    @media (min-width: 992px) and (max-width: 1200px){
+        max-width: 1000px;
+    }
+
+    @media (min-width: 768px) and (max-width: 990px){
+        max-width: 750px;
+    }
+}
+
+.content{
+    background-color: #F9FAFB;
+    padding-bottom: 80px;
+}
+
+.content__caption{
+    margin-bottom: 40px;
+}
+
+.content__banner{
+    margin-bottom: 60px;
+}
+
+.content__game-filter{
+    margin-bottom: 52px;
+}
+
+.content__game-cards{
+    margin-bottom: 40px;
+}
+
+.content__pagination{
+    margin-bottom: 80px;
+}
+
+.info-block__caption{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.info-block__sub-caption{
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .content__caption{
+        margin-bottom: 32px;
+    }
+
+    .content__banner{
+        margin-bottom: 40px;
+    }
+
+    .content__game-filter{
+        margin-bottom: 40px;
+    }
+
+    .content__game-cards{
+        margin-bottom: 32px;
+    }
+
+    .content__pagination{
+        margin-bottom: 60px;
+    }
+    
+}
+
+@media (max-width: 990px) {
+    .info-block__sub-caption{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 767px){
+    .content__caption{
+        margin-bottom: 20px;
+    }
+    
+    .content__banner{
+        margin-bottom: 32px;
+    }
+
+    .info-block__caption{
+        text-align: left;
+    }
+    
+    .info-block__sub-caption{
+        text-align: left;
+    }
+}
