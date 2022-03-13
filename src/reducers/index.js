@@ -129,9 +129,9 @@ const InitialState = {
                     rating: action.rating,
                     description: action.description,
                     votes: action.votes,
-                    price: action.price,
-                    oldPrice: action.oldPrice,
-                    discount: action.discount,
+                    price: action.price + '$',
+                    oldPrice: action.oldPrice + '$',
+                    discount: action.discount + '%',
                     picUrl: action.picUrl
                   }
                 ]

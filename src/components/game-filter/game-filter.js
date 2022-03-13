@@ -7,7 +7,9 @@ import './game-filter.scss'
 
 const GameFilter = ({className})=>{
 
-    const [genres, setGenres] = useState([])
+    const [genres, setGenres] = useState(['Action', 'Action RPG', 'Shooter', 'Multiplayer RPG', 'Card Game'])
+
+    const [isDropdownVisible, setDropdownVisible] = useState(true) 
 
     const selectChangeHandler = (e)=>{
         
@@ -20,13 +22,9 @@ const GameFilter = ({className})=>{
     }
 
     const removeFromGenres = (e)=>{
-        const genreToRemove = e.target.getAttribute("data-genre")
+        const genreToRemove = e.currentTarget.getAttribute('data-genre')
 
         setGenres(genres.filter((item) => item !== genreToRemove))
-    }
-
-    const openSelect = ()=>{
-
     }
 
     return(
@@ -60,23 +58,34 @@ const GameFilter = ({className})=>{
                                 })
                             }
                         </ul>
-                        <button className="select-genres-item__button" onClick={openSelect}>
+                        <button className="select-genres-item__button" onClick={() => setDropdownVisible(!isDropdownVisible)}>
                             <SvgArrow width="8" height="5" fill="#101828"/>
                         </button>
-                        <div className="select-genres-item__select-dropdown select-genres-dropdown">
-                            <input type="checkbox" className="select-genres-dropdown__input" name="genre" id="Action" value="Action" onClick={selectChangeHandler}/>
+                        { isDropdownVisible && 
+                            <div className="select-genres-item__select-dropdown select-genres-dropdown">
+                            <input type="checkbox" className="select-genres-dropdown__input" name="genre" id="Action" value="Action" checked={genres.includes("Action") ? true : false} onChange={selectChangeHandler}/>
                             <label htmlFor="Action" className="select-genres-dropdown__label">
                                 Action    
                             </label>
-                            <input type="checkbox" className="select-genres-dropdown__input" name="genre" id="Action RPG" value="Action RPG" onClick={selectChangeHandler}/>
+                            <input type="checkbox" className="select-genres-dropdown__input" name="genre" id="Action RPG" value="Action RPG" checked={genres.includes("Action RPG") ? true : false} onChange={selectChangeHandler}/>
                             <label htmlFor="Action RPG" className="select-genres-dropdown__label">
                                 Action RPG    
                             </label>
-                            <input type="checkbox" className="select-genres-dropdown__input" name="genre" id="Shooter" value="Shooter" onClick={selectChangeHandler}/>
+                            <input type="checkbox" className="select-genres-dropdown__input" name="genre" id="Shooter" value="Shooter" checked={genres.includes("Shooter") ? true : false} onChange={selectChangeHandler}/>
                             <label htmlFor="Shooter" className="select-genres-dropdown__label">
                                 Shooter    
                             </label>
+                            <input type="checkbox" className="select-genres-dropdown__input" name="genre" id="Multiplayer RPG" value="Multiplayer RPG" checked={genres.includes("Multiplayer RPG") ? true : false} onChange={selectChangeHandler}/>
+                            <label htmlFor="Multiplayer RPG" className="select-genres-dropdown__label">
+                                Multiplayer RPG    
+                            </label>
+                            <input type="checkbox" className="select-genres-dropdown__input" name="genre" id="Card Game" value="Card Game" checked={genres.includes("Card Game") ? true : false} onChange={selectChangeHandler}/>
+                            <label htmlFor="Card Game" className="select-genres-dropdown__label">
+                                Card Game    
+                            </label>
                         </div>
+                    }
+                        
                     </div>
                 </div>
                 <div className="input-block">
@@ -90,26 +99,28 @@ const GameFilter = ({className})=>{
                     </div>
                 </div>
             </div>
-            <ul className="game-filter__genres-list">
-                {
-                    genres.map((item)=>{
-                        return (
-                            <li key={genres.indexOf(item)}>
-                                <p>{item}</p>
-                                <button className="genres-list__remove-button">
-                                    <SvgCross width="8" height="8" fill="#7F56D9"/>
-                                </button>
-                            </li>
-                        )
-                    })
-                }
-                <li>
-                    <p>Clear all</p>
-                    <button className="genres-list__remove-button" onClick={()=>{setGenres([])}}>
-                        <SvgCross width="8" height="8" fill="#7F56D9"/>
-                    </button>
-                </li>
-            </ul>
+            { genres.length !== 0 && 
+                <ul className="game-filter__genres-list">
+                    {
+                        genres.map((item)=>{
+                            return (
+                                <li key={genres.indexOf(item)}>
+                                    <p>{item}</p>
+                                    <button className="genres-list__remove-button" data-genre={item} onClick={removeFromGenres}>
+                                        <SvgCross width="8" height="8" fill="#7F56D9"/>
+                                    </button>
+                                </li>
+                            )
+                        })
+                    }
+                    <li>
+                        <p>Clear all</p>
+                        <button className="genres-list__remove-button" onClick={()=>{setGenres([])}}>
+                            <SvgCross width="8" height="8" fill="#7F56D9"/>
+                        </button>
+                    </li>
+                </ul>
+            }
         </form>
     )
 }

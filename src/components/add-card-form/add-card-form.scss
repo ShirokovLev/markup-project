@@ -32,6 +32,12 @@
 }
 
 @media (max-width: 767px) {
+
+    .add-card-form{
+        max-height: calc(100vh - 30px);
+        overflow: auto;
+    }
+    
     .add-card-form__grid{
         grid-template-columns: 1fr;
     }

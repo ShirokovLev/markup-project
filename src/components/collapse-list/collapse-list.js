@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import CollapseItem from "../collapse-item";
 
+
 const CollapseList = ()=>{
+    
+
+    const [open, setOpen] = useState(false);
+
     return(
         <ul className="collapse-list">
             <li>
@@ -34,7 +39,6 @@ const CollapseList = ()=>{
                     <p className="text text_size_regular text_weight_regular text_color_gray">Sample Text</p>
                 </CollapseItem>
             </li>
-          
         </ul>
     )
 }

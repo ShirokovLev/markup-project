@@ -65,11 +65,11 @@
 
     .banner{
         padding: 32px;
-        background-position: center 100%;
         background-image: url(../../assets/images/banner-xs-bg.jpg), linear-gradient(#4229ab, #6d4dec);
         overflow: hidden;
         background-repeat: no-repeat;
         background-size: 100% auto, auto auto;
+        background-position: center center, center;
     }
 
     .banner__pic{

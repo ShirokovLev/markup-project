@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './collapse-item.scss'
+import { Collapse, Button } from "react-bootstrap";
 
 const CollapseItem = ({title, children})=>{
 
@@ -8,13 +9,15 @@ const CollapseItem = ({title, children})=>{
     return(
         
         <div className="collapse-item">
-            <a href="#" className="collapse-item__header" onClick={(e)=> {e.preventDefault(); toggleTextVisible(!textVisible)}}>
+            <a href="#" className="collapse-item__header" aria-controls="example-collapse-text" onClick={(e)=> {e.preventDefault(); toggleTextVisible(!textVisible)}}>
                 <span className="collapse-item__caption text text_size_medium text_weight_semibold text_color_black">{title}</span>
                 <span className={`collapse-item__trigger ${textVisible? 'collapse-item__trigger_active' : ''}`}></span>
             </a>
-            <div className={`collapse-item__text-block text-block collapse-block ${textVisible? 'collapse-block_visible' : ''}`}>
+            <Collapse in={textVisible}>
+                <div className={`collapse-item__text-block text-block collapse-block`} >
                 { children }
-            </div>
+                </div>
+            </Collapse>
         </div>
     
     )

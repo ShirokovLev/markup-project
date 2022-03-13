@@ -36,7 +36,7 @@ const Pagination = ({className})=>{
                     <SvgArrow width="9" height="6" fill="#101828"/>    
                 </button>
             </div>
-            <a href="#" className="button pagination-button button_color_white">Show more</a>
+            <a href="#" className="button pagination-button button_color_white d-flex d-md-none">Show more</a>
         </>
     )
 }

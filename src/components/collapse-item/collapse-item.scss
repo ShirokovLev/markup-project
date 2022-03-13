@@ -38,14 +38,6 @@
     transform: rotate(0deg);
 }
 
-.collapse-block{
-    display: none;
-}
-
-.collapse-block_visible{
-    display: block;
-}
-
 .collapse-item{
     padding: 24px 0;
 }
@@ -54,8 +46,10 @@
     border-bottom: 1px solid #EAECF0;
 }
 
-.collapse-item__text-block{
-    padding-top: 24px;
+.collapse-item__text-block:before{
+    content: '';
+    display: block;
+    height: 24px;
 }
 
 .text-block > .text{
