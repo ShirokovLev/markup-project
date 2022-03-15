@@ -6,7 +6,7 @@ import emptyPic from '../../assets/images/empty-pic.jpg'
 const GameCard = ({id, picUrl, genre, title, rating, votes, description, price, oldPrice, discount})=>{
     return(
         <div key={id} className="game-card">
-            <img className="game-card__image" src={picUrl ? picUrl : emptyPic} decoding="async" loading="lazy" alt="" width="256" height="200"/>
+            <img className="game-card__image" src={picUrl ? picUrl : emptyPic} decoding="async" loading="lazy" alt="{title}" width="256" height="200"/>
             <p className="game-card__genre" data-genre={genre}>
                 {genre}
             </p>
